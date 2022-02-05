@@ -16,7 +16,7 @@ public class Variable {
         // byte
         byte a = 127;
         byte b = 1;
-        int c = a+b;
+        int c = a + b;
         System.out.println(c);
 
         // char
