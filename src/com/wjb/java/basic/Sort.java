@@ -1,4 +1,4 @@
-package com.wjb.java;
+package com.wjb.java.basic;
 
 /**
  * <b><code>Sort</code></b>
@@ -13,7 +13,7 @@ package com.wjb.java;
  */
 public class Sort {
     public static void main(String[] args) {
-
+        test1();
     }
 
     // 冒泡排序
@@ -21,11 +21,16 @@ public class Sort {
         int[] ints = new int[]{3, 5, 6, 1, 2, 7, 8, 9, 4, 10};
 
         for (int i = 0; i < ints.length; i++) {
-            for (int j = 0; j < ints.length; j++) {
-                if (ints[j] < ints[j + 1]) {
-
+            for (int j = 0; j < ints.length - i - 1; j++) {
+                if (ints[j] > ints[j + 1]) {
+                    int temp = ints[j];
+                    ints[j] = ints[j + 1];
+                    ints[j + 1] = temp;
                 }
             }
+        }
+        for (int anInt : ints) {
+            System.out.println(anInt);
         }
     }
 

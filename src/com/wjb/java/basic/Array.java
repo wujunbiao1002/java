@@ -1,4 +1,4 @@
-package com.wjb.java;
+package com.wjb.java.basic;
 
 import java.util.Arrays;
 
@@ -20,13 +20,19 @@ public class Array {
 
     public static void test1() {
         int[] num = new int[]{5, 1, 2, 3, 4};
+        int[] num3 = new int[]{5, 1, 2, 3, 4};
+        System.out.println(Arrays.equals(num,num3));
+
         System.out.println(num);
         Arrays.sort(num);
         for (int j : num) {
             System.out.println(j);
         }
+
         int[][] num2 = new int[][]{{5, 1}, {2, 3}, {4}};
         System.out.println(num2);
         System.out.println(num2[0]);
+
+
     }
 }

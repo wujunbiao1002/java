@@ -1,4 +1,4 @@
-package com.wjb.java;
+package com.wjb.java.basic;
 
 /**
  * <b><code>Operator</code></b>
