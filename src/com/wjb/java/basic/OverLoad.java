@@ -12,7 +12,7 @@ package com.wjb.java.basic;
  * @since java
  */
 public class OverLoad {
-    public static void main(String[] args) {
+    public static void main(StringTest[] args) {
         test(1,2,3,4);
     }
 

@@ -14,7 +14,7 @@ import java.util.Arrays;
  * @since java 0.1.0
  */
 public class Array {
-    public static void main(String[] args) {
+    public static void main(StringTest[] args) {
         test1();
     }
 
@@ -32,7 +32,6 @@ public class Array {
         int[][] num2 = new int[][]{{5, 1}, {2, 3}, {4}};
         System.out.println(num2);
         System.out.println(num2[0]);
-
 
     }
 }

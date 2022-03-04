@@ -36,11 +36,15 @@ class Bank2 {
 
     }
 
-    public static Bank2 getInstance() {
-        if (bank != null) {
-            return bank;
+    public synchronized static Bank2 getInstance() {
+        if (bank == null){
+            synchronized (Bank2.class){
+                if (bank == null){
+                    bank = new Bank2();
+                }
+            }
         }
-        return bank = new Bank2();
+        return bank;
     }
 
     public String getBankName() {

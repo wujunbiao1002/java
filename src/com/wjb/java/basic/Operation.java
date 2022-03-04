@@ -13,7 +13,7 @@ package com.wjb.java.basic;
  */
 public class Operation {
 
-    public static void main(String[] args) {
+    public static void main(StringTest[] args) {
         test4();
     }
 
