@@ -1,5 +1,7 @@
 package com.wjb.java.classes;
 
+import java.io.Serializable;
+
 /**
  * <b><code>person</code></b>
  * <p/>
@@ -11,7 +13,7 @@ package com.wjb.java.classes;
  * @version 1.0.0
  * @since java 0.1.0
  */
-public class Person {
+public class Person implements Serializable {
     private int age;
     private String name;
 
@@ -49,5 +51,13 @@ public class Person {
     protected Person eat(){
         System.out.println("Person 吃饭");
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

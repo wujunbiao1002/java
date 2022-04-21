@@ -1,6 +1,9 @@
 package com.wjb.java.io;
 
+import com.wjb.java.classes.Person;
 import org.junit.Test;
+
+import java.io.*;
 
 /**
  * <b><code>ObjectIoTest</code></b>
@@ -15,7 +18,15 @@ import org.junit.Test;
  */
 public class ObjectIoTest {
     @Test
-    public void test(){
+    public void test() throws IOException, ClassNotFoundException {
+        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("object.bat"));
 
+        outputStream.writeObject(new Person(20,"小新"));
+        outputStream.flush();
+        outputStream.close();
+
+        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("object.bat"));
+        Person o = (Person) objectInputStream.readObject();
+        System.out.println(o.toString());
     }
 }
