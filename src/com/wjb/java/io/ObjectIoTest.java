@@ -24,7 +24,10 @@ public class ObjectIoTest {
         outputStream.writeObject(new Person(20,"小新"));
         outputStream.flush();
         outputStream.close();
+    }
 
+    @Test
+    public void test2() throws IOException, ClassNotFoundException {
         ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("object.bat"));
         Person o = (Person) objectInputStream.readObject();
         System.out.println(o.toString());

@@ -14,21 +14,26 @@ import java.io.Serializable;
  * @since java 0.1.0
  */
 public class Person implements Serializable {
+
+//    private final static long serialVersionUID = 12312313L;
+
     private int age;
     private String name;
 
-    public Person(){}
 
-    public Person(int age, String name){
-        this.age=age;
-        this.name=name;
+    public Person() {
     }
 
-    public void add(int a, int ...b){
+    public Person(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public void add(int a, int... b) {
         System.out.println("父类");
     }
 
-    public void add1(int a, int ...b){
+    public void add1(int a, int... b) {
         System.out.println("父类");
     }
 
@@ -48,7 +53,7 @@ public class Person implements Serializable {
         this.name = name;
     }
 
-    protected Person eat(){
+    protected Person eat() {
         System.out.println("Person 吃饭");
         return null;
     }
