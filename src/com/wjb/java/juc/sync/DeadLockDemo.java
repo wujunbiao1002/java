@@ -1,4 +1,4 @@
-package com.wjb.java.juc.lock.sync;
+package com.wjb.java.juc.sync;
 
 import java.util.concurrent.TimeUnit;
 

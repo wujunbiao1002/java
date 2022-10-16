@@ -4,8 +4,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.StampedLock;
 
 /**
- * @auther zzyy
- *
  * StampedLock = ReentrantReadWriteLock + 读的过程中也允许获取写锁介入
  */
 public class StampedLockDemo

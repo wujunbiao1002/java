@@ -1,5 +1,6 @@
 package com.wjb.java.juc.lock;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -38,7 +39,14 @@ class LockRunnable implements Runnable {
         while (true) {
             try {
                 Thread.sleep(100);
+                // 1
                 reentrantLock.lock();
+                // 2
+                reentrantLock.tryLock();
+                // 3
+                reentrantLock.tryLock(1, TimeUnit.SECONDS);
+                // 4
+                reentrantLock.lockInterruptibly();
                 if (num > 0){
                     System.out.println(Thread.currentThread().getName() + ":" + num);
                     num--;
@@ -48,6 +56,9 @@ class LockRunnable implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }finally {
+                reentrantLock.unlock();
+                reentrantLock.unlock();
+                reentrantLock.unlock();
                 reentrantLock.unlock();
             }
         }

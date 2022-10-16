@@ -6,14 +6,14 @@ package com.wjb.java.design;
 public class TemplateMethodDemo {
 
 	public static void main(String[] args) {
-		BankTemplateMethod btm = new DrawMoney();
+		BankTemplateMethodl btm = new DrawMoney();
 		btm.process();
 
-		BankTemplateMethod btm2 = new ManageMoney();
+		BankTemplateMethodl btm2 = new ManageMoney();
 		btm2.process();
 	}
 }
-abstract class BankTemplateMethod {
+abstract class BankTemplateMethodl {
 	// 具体方法
 	public void takeNumber() {
 		System.out.println("取号排队");
@@ -36,14 +36,14 @@ abstract class BankTemplateMethod {
 	}
 }
 
-class DrawMoney extends BankTemplateMethod {
+class DrawMoney extends BankTemplateMethodl {
 	@Override
 	public void transact() {
 		System.out.println("我要取款！！！");
 	}
 }
 
-class ManageMoney extends BankTemplateMethod {
+class ManageMoney extends BankTemplateMethodl {
 	@Override
 	public void transact() {
 		System.out.println("我要理财！我这里有2000万美元!!");
