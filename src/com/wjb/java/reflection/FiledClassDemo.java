@@ -1,5 +1,6 @@
-package com.wjb.java.reflection.element;
+package com.wjb.java.reflection;
 
+import com.wjb.java.reflection.element.Person;
 import org.junit.Test;
 
 import java.lang.reflect.Field;

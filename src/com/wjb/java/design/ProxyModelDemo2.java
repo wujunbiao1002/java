@@ -1,4 +1,4 @@
-package com.wjb.java.reflection;
+package com.wjb.java.design;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -15,7 +15,7 @@ import java.lang.reflect.Proxy;
  * @version 1.0.0
  * @since java
  */
-public class ProxyTest {
+public class ProxyModelDemo2 {
     public static void main(String[] args) {
         SuperMan superMan = new SuperMan();
         Human proxyInstance = (Human)ProxyFactory.getProxyInstance(superMan);

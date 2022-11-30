@@ -4,15 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * <b><code>MyLock</code></b>
- * <p/>
- * Description
- * <p/>
- * <b>Creation Time:</b> 2022/2/17 22:55.
  *
- * @author Arjun
- * @version 1.0.0
- * @since java 0.1.0
  */
 public class ReentrantLockDemo {
     public static void main(String[] args) {

@@ -11,6 +11,7 @@ package com.wjb.java.reflection.element;
  * @version 1.0.0
  * @since java 0.1.0
  */
+@FunctionalInterface
 public interface MyInterface {
     void info();
 }

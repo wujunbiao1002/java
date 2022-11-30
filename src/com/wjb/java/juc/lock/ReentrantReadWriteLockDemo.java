@@ -3,16 +3,12 @@ package com.wjb.java.juc.lock;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 class MyResource //资源类，模拟一个简单的缓存
 {
     Map<String, String> map = new HashMap<>();
-    //=====ReentrantLock 等价于 =====synchronized，之前讲解过
-    Lock lock = new ReentrantLock();
     //=====ReentrantReadWriteLock 一体两面，读写互斥，读读共享
     ReadWriteLock rwLock = new ReentrantReadWriteLock();
 
@@ -52,13 +48,12 @@ class MyResource //资源类，模拟一个简单的缓存
             rwLock.readLock().unlock();
         }
     }
-
-
 }
 
 
 /**
- *
+ * 写的时候不能获得读锁
+ * 读的时候不能获得写锁
  */
 public class ReentrantReadWriteLockDemo {
     public static void main(String[] args) {
@@ -68,16 +63,16 @@ public class ReentrantReadWriteLockDemo {
             int finalI = i;
             new Thread(() -> {
                 myResource.write(finalI + "", finalI + "");
-            }, String.valueOf(i)).start();
+            },"写锁线程->" +String.valueOf(i)).start();
         }
-
+        System.out.println("写线程启动完成");
         for (int i = 1; i <= 10; i++) {
             int finalI = i;
             new Thread(() -> {
                 myResource.read(finalI + "");
-            }, String.valueOf(i)).start();
+            }, "读锁线程->"+String.valueOf(i)).start();
         }
-
+        System.out.println("读线程启动完成");
         //暂停几秒钟线程
         try {
             TimeUnit.SECONDS.sleep(1);
@@ -91,5 +86,6 @@ public class ReentrantReadWriteLockDemo {
                 myResource.write(finalI + "", finalI + "");
             }, "新写锁线程->" + String.valueOf(i)).start();
         }
+        System.out.println("新写线程启动完成");
     }
 }

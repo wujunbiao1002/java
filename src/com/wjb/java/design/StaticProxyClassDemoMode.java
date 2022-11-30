@@ -1,4 +1,4 @@
-package com.wjb.java.reflection;
+package com.wjb.java.design;
 
 import org.junit.Test;
 

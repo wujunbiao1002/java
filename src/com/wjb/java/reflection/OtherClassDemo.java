@@ -1,5 +1,6 @@
-package com.wjb.java.reflection.element;
+package com.wjb.java.reflection;
 
+import com.wjb.java.reflection.element.Person;
 import org.junit.Test;
 
 import java.lang.annotation.Annotation;
@@ -48,8 +49,8 @@ public class OtherClassDemo {
      */
     @Test
     public void test2() {
-        Class<Person> personClass = Person.class;
-        Class<? super Person> superclass = personClass.getSuperclass();
+        Class<com.wjb.java.reflection.element.Person> personClass = com.wjb.java.reflection.element.Person.class;
+        Class<? super com.wjb.java.reflection.element.Person> superclass = personClass.getSuperclass();
         System.out.println(superclass);
 
         Method[] methods = superclass.getMethods();
@@ -64,7 +65,7 @@ public class OtherClassDemo {
      */
     @Test
     public void test3() {
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         Type genericSuperclass = clazz.getGenericSuperclass();
         System.out.println(genericSuperclass);
@@ -76,7 +77,7 @@ public class OtherClassDemo {
      */
     @Test
     public void test4() {
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         Type genericSuperclass = clazz.getGenericSuperclass();
         ParameterizedType paramType = (ParameterizedType) genericSuperclass;
@@ -91,7 +92,7 @@ public class OtherClassDemo {
      */
     @Test
     public void test5() {
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         Class[] interfaces = clazz.getInterfaces();
         for (Class c : interfaces) {
@@ -111,7 +112,7 @@ public class OtherClassDemo {
      */
     @Test
     public void test6() {
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         Package pack = clazz.getPackage();
         System.out.println(pack);

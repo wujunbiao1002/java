@@ -1,5 +1,6 @@
-package com.wjb.java.reflection.element;
+package com.wjb.java.reflection;
 
+import com.wjb.java.reflection.element.Person;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;
@@ -23,10 +24,10 @@ public class ReflectionClassDemo {
      */
     @Test
     public void testField() throws Exception {
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         //创建运行时类的对象
-        Person p = (Person) clazz.newInstance();
+        com.wjb.java.reflection.element.Person p = (com.wjb.java.reflection.element.Person) clazz.newInstance();
 
 
         //获取指定的属性：要求运行时类中属性声明为public
@@ -54,10 +55,10 @@ public class ReflectionClassDemo {
      */
     @Test
     public void testField1() throws Exception {
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         //创建运行时类的对象
-        Person p = (Person) clazz.newInstance();
+        com.wjb.java.reflection.element.Person p = (com.wjb.java.reflection.element.Person) clazz.newInstance();
 
         //1. getDeclaredField(String fieldName):获取运行时类中指定变量名的属性
         Field name = clazz.getDeclaredField("name");
@@ -76,10 +77,10 @@ public class ReflectionClassDemo {
     @Test
     public void testMethod() throws Exception {
 
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         //创建运行时类的对象
-        Person p = (Person) clazz.newInstance();
+        com.wjb.java.reflection.element.Person p = (com.wjb.java.reflection.element.Person) clazz.newInstance();
 
         /*
         1.获取指定的某个方法
@@ -105,7 +106,7 @@ public class ReflectionClassDemo {
         showDesc.setAccessible(true);
         //如果调用的运行时类中的方法没有返回值，则此invoke()返回null
 //        Object returnVal = showDesc.invoke(null);
-        Object returnVal = showDesc.invoke(Person.class, "1");
+        Object returnVal = showDesc.invoke(com.wjb.java.reflection.element.Person.class, "1");
         //static String showDesc(String s)
         System.out.println(returnVal);
     }
@@ -115,7 +116,7 @@ public class ReflectionClassDemo {
      */
     @Test
     public void testConstructor() throws Exception {
-        Class clazz = Person.class;
+        Class clazz = com.wjb.java.reflection.element.Person.class;
 
         //private Person(String name)
         /*
@@ -129,7 +130,7 @@ public class ReflectionClassDemo {
         constructor.setAccessible(true);
 
         //3.调用此构造器创建运行时类的对象
-        Person per = (Person) constructor.newInstance("Tom");
+        com.wjb.java.reflection.element.Person per = (Person) constructor.newInstance("Tom");
         System.out.println(per);
 
     }

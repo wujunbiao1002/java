@@ -2,6 +2,7 @@ package com.wjb.java.reflection;
 
 import org.junit.Test;
 
+import java.io.Serializable;
 import java.lang.annotation.ElementType;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -134,5 +135,48 @@ public class RefectionClassDemo {
         for (Constructor<?> constructor : constructors) {
             System.out.println(constructor.toString());
         }
+    }
+}
+
+class Person<T> implements Serializable {
+    private String name;
+    private int age;
+    public int height = 0;
+
+    public Person() {
+
+    }
+
+    private Person(String name) {
+        this.name = name;
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void showInfo() {
+        System.out.println(getName() + " - " + getAge() + " - " + this.height);
+    }
+
+    private void showSecret() {
+        System.out.println("秘密");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

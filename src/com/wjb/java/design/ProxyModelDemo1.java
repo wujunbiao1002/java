@@ -11,7 +11,7 @@ package com.wjb.java.design;
  * @version 1.0.0
  * @since java 0.1.0
  */
-public class ProxyModelDemo {
+public class ProxyModelDemo1 {
     public static void main(String[] args) {
         ProxyServer proxyServer = new ProxyServer(new Server());
         proxyServer.browse();
