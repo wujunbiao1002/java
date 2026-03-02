@@ -1,4 +1,4 @@
-package com.wjb.java.design;
+package com.wjb.java.designMode.singletonPattern;
 
 /**
  * 单例设计模式延迟创建，懒汉式

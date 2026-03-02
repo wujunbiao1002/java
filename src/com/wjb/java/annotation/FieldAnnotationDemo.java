@@ -87,6 +87,9 @@ class Entity {
     }
 }
 
+/**
+ * @author Arjun
+ */
 @Documented
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
@@ -98,6 +101,9 @@ class Entity {
     String error();
 }
 
+/**
+ * @author Arjun
+ */
 @Documented
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

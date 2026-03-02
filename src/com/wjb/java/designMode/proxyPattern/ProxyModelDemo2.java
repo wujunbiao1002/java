@@ -1,4 +1,4 @@
-package com.wjb.java.design;
+package com.wjb.java.designMode.proxyPattern;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

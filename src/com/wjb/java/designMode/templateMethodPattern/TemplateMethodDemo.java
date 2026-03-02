@@ -1,4 +1,4 @@
-package com.wjb.java.design;
+package com.wjb.java.designMode.templateMethodPattern;
 /**
  * 象类的应用：模板方法的设计模式
  * @author Arjun

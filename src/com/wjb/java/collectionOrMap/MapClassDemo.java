@@ -1,4 +1,4 @@
-package com.wjb.java.basic;
+package com.wjb.java.collectionOrMap;
 
 import org.junit.Test;
 
@@ -44,6 +44,15 @@ public class MapClassDemo {
         for (Object value : values) {
             System.out.println(value);
         }
+    }
 
+    @Test
+    public void test2() {
+        Map<Object, Object> map = null;
+//        map.put("A", 1);
+//        map.put("B", 1);
+//        map.put("QR_CODE", 1);
+        map.remove("QR_CODE");
+        System.out.println(map);
     }
 }

@@ -1,4 +1,4 @@
-package com.wjb.java.design;
+package com.wjb.java.designMode.proxyPattern;
 
 /**
  * <b><code>Proxy</code></b>

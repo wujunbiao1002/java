@@ -1,4 +1,4 @@
-package com.wjb.java.design;
+package com.wjb.java.designMode.singletonPattern;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

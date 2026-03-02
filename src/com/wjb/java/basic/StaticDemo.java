@@ -1,4 +1,4 @@
-package com.wjb.java.statics;
+package com.wjb.java.basic;
 
 /**
  * <b><code>Person</code></b>
@@ -16,12 +16,12 @@ public class StaticDemo {
         Student student = new Student();
     }
 }
-class Person{
+class StaticPerson{
     int age = 10;
     static {
         System.out.println("Person的静态代码块");
     }
-    Person(){
+    StaticPerson(){
         System.out.println("Person的构造函数");
         age = 11;
     }
@@ -30,7 +30,7 @@ class Person{
     }
 }
 
-class Student extends Person{
+class Student extends StaticPerson{
     String name = "学生";
 
     static {

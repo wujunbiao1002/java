@@ -1,4 +1,4 @@
-package com.wjb.java.basic;
+package com.wjb.java.collectionOrMap;
 
 import org.junit.Test;
 

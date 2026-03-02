@@ -48,8 +48,7 @@ public class ThreadLocalDemo1 {
                     house.saleVolume.remove(); // 重点
                 }
             }, String.valueOf(i)).start();
-        }
-        ;
+        };
 
         //暂停毫秒
         try {

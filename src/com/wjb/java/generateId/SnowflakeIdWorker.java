@@ -1,4 +1,4 @@
-package com.wjb.java.id;
+package com.wjb.java.generateId;
 
 /**
  * <b><code>SnowFlake</code></b>
